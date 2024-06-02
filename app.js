@@ -73,7 +73,7 @@ const studentShema = new mongoose.Schema({
   
       const savedStudent = await newStudent.save();
       console.log('Student data saved:', savedStudent);
-      res.status(200).send('Student data saved successfully.');
+      res.status(200).render('admitted.pug');
     } catch (err) {
       console.error(err);
       res.status(500).send('Error saving student data.');
